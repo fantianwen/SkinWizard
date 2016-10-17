@@ -5,6 +5,8 @@ import android.util.AttributeSet;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -63,7 +65,7 @@ public class SkinInflateFactory implements LayoutInflater.Factory {
         if (skinAttribute == null) {
             SkinAttribute skinAttributeNew = new SkinAttribute();
             skinAttributeNew.setAttributeName(attributeName);
-            // 当需要加载的时候在解析
+            // 当需要加载的时候再解析
             //         skinAttributeNew.setAttributeValue();
             skinAttributes.put(code, skinAttributeNew);
         }
@@ -85,8 +87,11 @@ public class SkinInflateFactory implements LayoutInflater.Factory {
             if (skinAttributes.get(SkinConfig.SKIN_ATTRIBUTE.BACKGROUND.getCode()) != null) {
                 textView.setBackgroundColor(SkinManager.getInstance().parseBackgroundColor(mContext));
             }
+        }
 
-
+        if (view instanceof ViewGroup) {
+            ViewGroup viewGroup = (ViewGroup) view;
+            viewGroup.setBackgroundColor(SkinManager.getInstance().parseBackgroundColor(mContext));
         }
 
     }

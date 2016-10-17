@@ -7,11 +7,12 @@
 
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/mainContainer"
+        android:background="@color/colorPrimaryDark"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        van:skinChangeEnable="true">
 
         <TextView
-            xmlns:van="http://schemas.android.com/van"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
