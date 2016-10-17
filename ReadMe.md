@@ -2,6 +2,21 @@
 
 一个非常低端的换肤库
 
+
+
+
+### feature
+
+#### v 0.0.1
+
+- TextView 
+	- textColor
+	- background 	
+	
+- ViewGroup
+	- background
+
+
 ### 一瞥
 
 
