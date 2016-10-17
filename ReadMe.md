@@ -24,6 +24,25 @@ public class SkinWizardApplication extends Application implements SkinManager.Sk
 }
 ```
 
+- 在希望换肤的`view`上面使用：`van:skinChangeEnable="true"`,并在该xml文件中使用命名空间：
+
+```
+xmlns:van="http://schemas.android.com/van"
+```
+
+例如：
+
+```
+<TextView
+ xmlns:van="http://schemas.android.com/van"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent"
+    android:text="MainActivity"
+    android:textColor="@color/colorPrimaryDark"
+    van:skinChangeEnable="true" />
+```
+
 - 继承`BaseActivity`，直接在希望换肤的地方
 
 ```
